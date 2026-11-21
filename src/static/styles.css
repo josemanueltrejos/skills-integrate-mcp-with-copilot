@@ -16,12 +16,76 @@ body {
 }
 
 header {
+  position: relative;
   text-align: center;
-  padding: 20px 0;
+  padding: 58px 20px 20px;
   margin-bottom: 30px;
   background-color: #1a237e;
   color: white;
   border-radius: 5px;
+}
+
+.auth-controls {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.auth-controls button {
+  background-color: white;
+  color: #1a237e;
+}
+
+#login-dialog {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  margin: auto;
+  max-width: 420px;
+  padding: 24px;
+  width: calc(100% - 32px);
+}
+
+#login-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#login-dialog form {
+  display: grid;
+  gap: 12px;
+}
+
+#login-dialog h3 {
+  color: #1a237e;
+}
+
+#login-dialog input {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.login-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.secondary-button {
+  background-color: #666;
+}
+
+@media (max-width: 480px) {
+  .auth-controls {
+    top: 8px;
+    right: 8px;
+  }
+
+  .auth-controls button {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
 }
 
 header h1 {
